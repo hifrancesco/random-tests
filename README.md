@@ -1,12 +1,14 @@
 ![](https://komarev.com/ghpvc/?username=hifrancesco&color=green)
 
+<pre></pre>
+
 <a href="https://uk.linkedin.com/in/francescowang">
-<img align="center" src="images/header.png" <h6>Connect with me on Linkedin.</h6>
-</a>
+<img align="center" src="images/header-1.png" </a>
 
----
+<pre></pre>
 
-<h3 style=font-family:cursive; text-align:center;>I am a passionate DevOps Engineer from the UK.</h3>
+<a href="https://uk.linkedin.com/in/francescowang">
+<img align="center" src="images/header-2.png" </a>
 
 ---
 
