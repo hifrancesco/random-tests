@@ -1,0 +1,14 @@
+name: Branch Protection Rule Example
+on:
+  branch_protection_rule:
+    types: [created, edited, deleted]
+
+jobs:
+  check_branch_protection:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Branch Protection
+      run: |
+        echo "Branch protection rule was ${{ job.event.action }}d for branch ${{ job.event.branch }}."
+        echo "Required reviews: ${{ job.event.required_review_count }}"
+        echo "Restrictions: ${{ job.event.restrictions }}"

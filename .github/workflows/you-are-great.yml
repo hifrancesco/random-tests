@@ -1,0 +1,13 @@
+name: You Are Great Workflow
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Message action
+      run: echo "You are great"

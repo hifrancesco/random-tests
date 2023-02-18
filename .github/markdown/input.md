@@ -1,0 +1,1 @@
+This workflow listens for a push event, sets an environment variable INPUT to the input value, and runs a step that echoes "Hello" and the input to the console. The inputs context is automatically provided by Github Actions, and the input specified in the workflow can be set when the workflow is triggered.

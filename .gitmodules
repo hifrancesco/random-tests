@@ -1,0 +1,9 @@
+[submodule "starter-workflows"]
+	path = starter-workflows
+	url = git@github.com:actions/starter-workflows.git
+[submodule "anuraghazra"]
+	path = anuraghazra
+	url = git@github.com:anuraghazra/anuraghazra.git
+[submodule "simonw"]
+	path = simonw
+	url = git@github.com:simonw/simonw.git

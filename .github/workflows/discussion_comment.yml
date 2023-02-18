@@ -1,0 +1,22 @@
+name: Discussion Comment Workflow
+
+on:
+  discussion_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check activity type
+      if: ${{ toJson(github.event.action) == 'created' }}
+      run: echo "Comment created"
+
+    - name: Check activity type
+      if: ${{ toJson(github.event.action) == 'edited' }}
+      run: echo "Comment edited"
+
+    - name: Check activity type
+      if: ${{ toJson(github.event.action) == 'deleted' }}
+      run: echo "Comment deleted"

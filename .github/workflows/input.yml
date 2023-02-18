@@ -1,0 +1,19 @@
+name: Hello Workflow
+
+on:
+  push:
+    branches:
+      - dev
+  schedule:
+    - cron: '30 17 * * *'
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hello action
+      run: |
+        for name in "Franky" "John" "Elizabeth" "Marcus" "Taylor"; do
+          echo "Hello, ${name}"
+        done

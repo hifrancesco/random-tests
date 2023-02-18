@@ -1,0 +1,17 @@
+name: Workflow Run Notifier
+
+on:
+  workflow_run:
+    types: [failed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send Slack notification
+      uses: slack/actions/slack-message@v2
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      with:
+        message: "Workflow run failed on repository: ${{ github.repository }} Commit: ${{ github.sha }}"
