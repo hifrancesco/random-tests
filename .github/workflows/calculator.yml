@@ -20,6 +20,6 @@ jobs:
       continue-on-error: true
     
     - name: Display output
-    run: cat output.txt
+      run: cat output.txt
 
 
