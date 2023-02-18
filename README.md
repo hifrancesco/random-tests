@@ -1,11 +1,9 @@
 ![](https://komarev.com/ghpvc/?username=hifrancesco&color=green)
 
-<pre></pre>
-
 <a href="https://uk.linkedin.com/in/francescowang">
 <img align="center" src="images/header-1.png" </a>
 
-<pre></pre>
+---
 
 <a href="https://uk.linkedin.com/in/francescowang">
 <img align="center" src="images/header-2.png" </a>
