@@ -1,44 +1,36 @@
 #!/bin/bash
 
-echo "Welcome to the calculator!"
+echo "Enter the first number: "
+read num1
 
-while true; do
-  # Prompt the user for the operation to perform
-  echo "Please enter the operation to perform: +, -, *, / (or q to quit)"
-  read operation
+echo "Enter the second number: "
+read num2
 
-  # Quit the script if the user enters 'q'
-  if [[ "$operation" == "q" ]]; then
-    echo "Exiting the calculator."
-    exit 0
-  fi
+echo "Select an operation:"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+read op
 
-  # Prompt the user for the operands
-  echo "Please enter the first operand:"
-  read operand1
-  echo "Please enter the second operand:"
-  read operand2
-
-  # Perform the calculation based on the selected operation
-  case "$operation" in
-    "+")
-      result=$(echo "$operand1 + $operand2" | bc)
-      ;;
-    "-")
-      result=$(echo "$operand1 - $operand2" | bc)
-      ;;
-    "*")
-      result=$(echo "$operand1 * $operand2" | bc)
-      ;;
-    "/")
-      result=$(echo "scale=2; $operand1 / $operand2" | bc)
-      ;;
+case $op in
+    1)
+        result=$((num1 + num2))
+        echo "Result: $result"
+        ;;
+    2)
+        result=$((num1 - num2))
+        echo "Result: $result"
+        ;;
+    3)
+        result=$((num1 * num2))
+        echo "Result: $result"
+        ;;
+    4)
+        result=$((num1 / num2))
+        echo "Result: $result"
+        ;;
     *)
-      echo "Invalid operation. Please try again."
-      continue
-      ;;
-  esac
-
-  # Display the result to the user
-  echo "The result of $operand1 $operation $operand2 is $result."
-done
+        echo "Invalid option selected"
+        ;;
+esac
