@@ -1,7 +1,7 @@
 #!/bin/bash
 
-num1=$((1 + RANDOM % 100))
-num2=$((1 + RANDOM % 100))
+num1=1
+num2=10
 
 case $op in
     1)
