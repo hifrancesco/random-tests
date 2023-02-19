@@ -1,14 +1,7 @@
 #!/bin/bash
 
-num1=10
-num2=10
-
-echo "Select an operation:"
-echo "1. Addition"
-echo "2. Subtraction"
-echo "3. Multiplication"
-echo "4. Division"
-read op
+num1=$((1 + RANDOM % 100))
+num2=$((1 + RANDOM % 100))
 
 case $op in
     1)
