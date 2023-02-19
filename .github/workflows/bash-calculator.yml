@@ -1,17 +1,25 @@
 name: Calculator Workflow
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Run calculator script
-      run: |
-        chmod +x calculator.sh
-        ./calculator.sh
-      shell: /bin/bash
+      - name: Set up Bash
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Run calculator script
+        run: |
+          chmod +x calculator.sh
+          ./calculator.sh
+        shell: bash
