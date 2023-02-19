@@ -14,4 +14,4 @@ jobs:
       run: |
         chmod +x calculator.sh
         ./calculator.sh
-
+      shell: /bin/bash
