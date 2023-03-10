@@ -1,4 +1,6 @@
-## Introduction to AI
+# [Get started with AI on Azure](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/)
+
+## [Introduction to AI](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/1-introduction)
 
 ### What is AI?
 
@@ -52,3 +54,75 @@ Image analysis | You can create solutions that combine machine learning models w
 Face detection, analysis, and recognition | Face detection is a specialized form of object detection that locates human faces in an image. This can be combined with classification and facial geometry analysis techniques to recognize individuals based on their facial features.
 Optical character recognition (OCR) | Optical character recognition is a technique used to detect and read text in images. You can use OCR to read text in photographs (for example, road signs or store fronts) or to extract information from scanned documents such as letters, invoices, or forms.
 
+### Computer vision services in Microsoft Azure
+
+Microsoft Azure provides the following cognitive services to help you create computer vision solutions:
+
+Service | Capabilities
+------- | ------------
+Computer Vision | You can use this service to analyze images and video, and extract descriptions, tags, objects, and text.
+Custom Vision | Use this service to train custom image classification and object detection models using your own images.
+Face | The Face service enables you to build face detection and facial recognition solutions.
+Form Recognizer | Use this service to extract information from scanned forms and invoices.
+
+## [Understand natural language processing](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/5-understand-natural-language-process)
+
+Natural language processing (NLP) is the area of AI that deals with creating software that understands written and spoken language.
+
+NLP enables you to create software that can:
+
+- Analyze and interpret text in documents, email messages, and other sources.
+- Interpret spoken language, and synthesize speech responses.
+- Automatically translate spoken or written phrases between languages.
+- Interpret commands and determine appropriate actions.
+
+### Natural language processing in Microsoft Azure
+
+In Microsoft Azure, you can use the following cognitive services to build natural language processing solutions:
+
+Service | Capabilities
+------- | ------------
+Language | Use this service to access features for understanding and analyzing text, training language models that can understand spoken or text-based commands, and building intelligent applications.
+Translator | Use this service to translate text between more than 60 languages.
+Speech | Use this service to recognize and synthesize speech, and to translate spoken languages.
+Azure Bot | This service provides a platform for conversational AI, the capability of a software "agent" to participate in a conversation. Developers can use the _Bot Framework_ to create a bot and manage it with Azure Bot Service - integrating back-end services like Language, and connecting to channels for web chat, email, Microsoft Teams, and others.
+
+## [Understand knowledge mining](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/6-understand-knowledge-mining)
+
+Knowledge mining is the term used to describe solutions that involve extracting information from large volumes of often unstructured data to create a searchable knowledge store.
+
+### Knowledge mining in Microsoft Azure
+
+One of these knowledge mining solutions is Azure Cognitive Search, a private, enterprise, search solution that has tools for building indexes. The indexes can then be used for internal only use, or to enable searchable content on public facing internet assets.
+
+Azure Cognitive Search can utilize the built-in AI capabilities of Azure Cognitive Services such as image processing, content extraction, and natural language processing to perform knowledge mining of documents. The product's AI capabilities makes it possible to index previously unsearchable documents and to extract and surface insights from large amounts of data quickly.
+
+## [Challenges and risks with AI](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/7-challenges-with-ai)
+
+Artificial Intelligence is a powerful tool that can be used to greatly benefit the world. However, like any tool, it must be used responsibly.
+
+The following table shows some of the potential challenges and risks facing an AI application developer.
+
+Challenge or Risk | Example
+----------------- | --------
+Bias can affect results | A loan-approval model discriminates by gender due to bias in the data with which it was trained
+Errors may cause harm | An autonomous vehicle experiences a system failure and causes a collision
+Data could be exposed | A medical diagnostic bot is trained using sensitive patient data, which is stored insecurely
+Solutions may not work for everyone | A home automation assistant provides no audio output for visually impaired users
+Users must trust a complex system | An AI-based financial tool makes investment recommendations - what are they based on?
+Who's liable for AI-driven decisions? | An innocent person is convicted of a crime based on evidence from facial recognition – who's responsible?
+
+## [Understand Responsible AI](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/8-understand-responsible-ai)
+
+- Fairness
+- Reliability and safety
+- Privacy and security
+- Inclusiveness
+- Transparency
+- Accountability
+
+### [Further resources](https://www.microsoft.com/en-gb/ai/responsible-ai-resources?rtc=1)
+
+## [Knowledge check](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/8a-knowledge-check)
+
+## [Summary](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/9-summary)
