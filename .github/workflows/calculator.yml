@@ -1,0 +1,25 @@
+name: Python Script Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Run Python script and capture output
+      run: python my_script.py > output.txt
+      continue-on-error: true
+    
+    - name: Display output
+      run: cat output.txt
+
+
