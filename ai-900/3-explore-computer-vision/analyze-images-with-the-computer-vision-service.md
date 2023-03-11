@@ -8,9 +8,9 @@ Of course, computers don't have biological eyes that work the way ours do, but t
 
 Some potential uses for computer vision include:
 
-- **Content Organization**: Identify people or objects in photos and organize them based on that identification. Photo recognition applications like this are commonly used in photo storage and social media applications.
-- **Text Extraction**: Analyze images and PDF documents that contain text and extract the text into a structured format.
-- **Spatial Analysis**: Identify people or objects, such as cars, in a space and map their movement within that space.
+- [**Content Organization**](ai-900/../../docs/content-organization.md): Identify people or objects in photos and organize them based on that identification. Photo recognition applications like this are commonly used in photo storage and social media applications.
+- [**Text Extraction**](ai-900/../../docs/text-extraction.md): Analyze images and PDF documents that contain text and extract the text into a structured format.
+- [**Spatial Analysis**](ai-900/../../docs/statial-analysis.md): Identify people or objects, such as cars, in a space and map their movement within that space.
 
 To an AI application, an image is just an array of pixel values. These numeric values can be used as features to train machine learning models that make predictions about the image and its contents.
 
@@ -24,8 +24,8 @@ The Computer Vision service is a cognitive service in Microsoft Azure that provi
 
 To use the Computer Vision service, you need to create a resource for it in your Azure subscription. You can use either of the following resource types:
 
-- **Computer Vision**: A specific resource for the Computer Vision service. Use this resource type if you don't intend to use any other cognitive services, or if you want to track utilization and costs for your Computer Vision resource separately.
-- **Cognitive Services**: A general cognitive services resource that includes Computer Vision along with many other cognitive services; such as Text Analytics, Translator Text, and others. Use this resource type if you plan to use multiple cognitive services and want to simplify administration and development.
+- [**Computer Vision**](ai-900/../../docs/computer-vision.md): A specific resource for the Computer Vision service. Use this resource type if you don't intend to use any other cognitive services, or if you want to track utilization and costs for your Computer Vision resource separately.
+- [**Cognitive Services**](ai-900/../../docs/cognitive-services.md): A general cognitive services resource that includes Computer Vision along with many other cognitive services; such as Text Analytics, Translator Text, and others. Use this resource type if you plan to use multiple cognitive services and want to simplify administration and development.
 
 Whichever type of resource you choose to create, it will provide two pieces of information that you will need to use it:
 
@@ -38,7 +38,7 @@ After you've created a suitable resource in your subscription, you can submit im
 
 #### Describing an image
 
-Computer Vision has the ability to analyze an image, evaluate the objects that are detected, and generate a human-readable phrase or sentence that can describe what was detected in the image. Depending on the image contents, the service may return multiple results, or phrases. Each returned phrase will have an associated confidence score, indicating how confident the algorithm is in the supplied description. The highest confidence phrases will be listed first.
+Computer Vision has the ability to analyze an image, evaluate the objects that are detected, and generate a human-readable phrase or sentence that can describe what was detected in the image. Depending on the image contents, the service may return multiple results, or phrases. Each returned phrase will have an associated [confidence score](ai-900/../../docs/confidence-score.md), indicating how confident the algorithm is in the supplied description. The highest confidence phrases will be listed first.
 
 To help you understand this concept, consider the following image of the Empire State building in New York. The returned phrases are listed below the image in the order of confidence.
 
