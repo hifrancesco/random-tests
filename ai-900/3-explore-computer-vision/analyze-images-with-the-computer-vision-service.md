@@ -1,6 +1,6 @@
 # [Analyze images with the Computer Vision service](https://learn.microsoft.com/en-gb/training/modules/analyze-images-computer-vision/)
 
-## [Introduction](https://learn.microsoft.com/en-gb/training/modules/analyze-images-computer-vision/1-introduction)
+## [Introduction](https://learn.microsoft.com/en-gb/training/modules/analyze-images-computer-vision/1-introduction)
 
 *Computer vision* is one of the core areas of artificial intelligence (AI), and focuses on creating solutions that enable AI applications to "see" the world and make sense of it.
 
