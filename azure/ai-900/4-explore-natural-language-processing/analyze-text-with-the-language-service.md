@@ -163,3 +163,9 @@ For example, suppose you use the Language service to detect entities in the foll
 |----------|----------|------------|-------------------------------------------------|
 | Seattle  | Location |            | https://en.wikipedia.org/wiki/Seattle            |
 | last week | DateTime | DateRange  |                                                 |
+
+## [Exercise - Explore text analytics](https://learn.microsoft.com/en-gb/training/modules/analyze-text-with-text-analytics-service/3-exercise)
+
+## [Knowledge check](https://learn.microsoft.com/en-gb/training/modules/analyze-text-with-text-analytics-service/3a-knowledge-check)
+
+## [Summary](https://learn.microsoft.com/en-gb/training/modules/analyze-text-with-text-analytics-service/4-summary)
