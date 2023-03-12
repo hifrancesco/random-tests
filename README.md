@@ -1,5 +1,7 @@
 ![](https://komarev.com/ghpvc/?username=hifrancesco&color=green)
 
+# Do not let perfectionism hinder you from progress.
+
 <section>
 <a href="https://uk.linkedin.com/in/francescowang">
 <img align="center" src="images/header-1.png" </a>
