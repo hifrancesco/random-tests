@@ -1,0 +1,7 @@
+Object detection in computer vision refers to the process of identifying and localizing objects within an image or video stream. It involves not only identifying the presence of objects, but also determining their location and extent within the image.
+
+Object detection is a more complex task than image classification, as it requires not only recognizing what is in the image, but also precisely localizing where the objects are. It is typically performed using machine learning algorithms, such as convolutional neural networks (CNNs), that are trained on a large dataset of labeled images.
+
+The basic process of object detection involves first generating a set of candidate object regions in the image, often using a technique such as selective search. Then, for each candidate region, a classifier is used to determine whether or not it contains an object of interest, such as a person or a car. Finally, the output of the classifier is refined to more accurately localize the object within the candidate region.
+
+Object detection has many practical applications, such as surveillance, autonomous driving, and robotics. It is a challenging task due to the wide variety of object types, sizes, and orientations that can occur in real-world images. However, recent advances in deep learning and computer vision have led to significant progress in the field, and object detection algorithms are now able to achieve high levels of accuracy on many challenging datasets.

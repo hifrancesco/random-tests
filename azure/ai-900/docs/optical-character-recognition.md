@@ -1,0 +1,7 @@
+Optical character recognition (OCR) is a process in computer vision that involves recognizing and extracting text from images. The goal of OCR is to convert images of text into machine-readable text that can be processed and analyzed by computers.
+
+OCR typically involves several stages. First, the image is preprocessed to enhance the quality of the text and remove any noise or distortion. Next, the text is segmented into individual characters or words. Then, each character or word is recognized using pattern recognition techniques, such as template matching or machine learning algorithms.
+
+OCR can be used in a wide range of applications, such as digitizing printed documents, recognizing handwriting, and identifying text in images or video frames. It is commonly used in industries such as banking, healthcare, and government, where there is a large volume of paper-based documents that need to be digitized and processed.
+
+OCR technology has evolved significantly over the years, thanks to advances in computer vision, machine learning, and deep learning. Today, there are many commercial OCR software packages and APIs available that can accurately recognize and extract text from a wide range of sources, including scanned documents, photos, and videos.
