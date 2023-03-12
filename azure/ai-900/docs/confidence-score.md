@@ -1,0 +1,7 @@
+In computer vision, a confidence score is a measure of the algorithm's confidence in its prediction or classification of an image. It is a probability value that indicates how likely the algorithm believes a certain prediction or classification is correct.
+
+For example, if a computer vision algorithm is trained to recognize objects in images, it may output a confidence score of 0.85 for an image of a cat, which means that it is 85% confident that the image contains a cat. Similarly, if the same algorithm is presented with an image of a dog, it may output a confidence score of 0.65, which means that it is 65% confident that the image contains a dog.
+
+The confidence score is an important metric in computer vision, as it allows developers to set thresholds for accepting or rejecting predictions based on the level of confidence. For example, if the threshold for accepting a prediction is set at 0.8, the algorithm would only accept predictions with a confidence score of 0.8 or higher, and would reject any predictions with a lower score.
+
+Overall, the confidence score provides a measure of the reliability of the algorithm's predictions, allowing developers to fine-tune their applications and improve their accuracy.
