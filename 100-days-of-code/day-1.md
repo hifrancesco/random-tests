@@ -64,3 +64,33 @@ The `os` module provides methods for interacting with the file system, while the
 Python also provides a `pickle` module for serializing and de-serializing objects to and from files. 
 
 This can be useful for storing and retrieving complex data structures, such as lists, dictionaries, and objects.
+
+
+
+
+An object is any entity that has attributes and behaviors. For example, a person is an object.
+
+- attributes - name, age, height, etc.
+- behaviour - calm, happy, etc.
+
+Similarly, a class is a blueprint for that object.
+
+class Parrot:
+
+    # class attribute
+    name = ""
+    age = 0
+
+# create parrot1 object
+parrot1 = Parrot()
+parrot1.name = "Blu"
+parrot1.age = 10
+
+# create another object parrot2
+parrot2 = Parrot()
+parrot2.name = "Woo"
+parrot2.age = 15
+
+# access attributes
+print(f"{parrot1.name} is {parrot1.age} years old")
+print(f"{parrot2.name} is {parrot2.age} years old")
