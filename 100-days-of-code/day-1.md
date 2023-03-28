@@ -106,3 +106,10 @@ The area and perimeter methods use these attributes to calculate the area and pe
 You can create an instance of the Rectangle class by passing the width and height as arguments to the constructor `__init__` method.
 
 You can call the methods `area()` and `perimeter()` on the instance to get the area and perimeter of the rectangle.
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+```
