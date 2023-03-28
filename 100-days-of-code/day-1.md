@@ -94,3 +94,15 @@ parrot2.age = 15
 # access attributes
 print(f"{parrot1.name} is {parrot1.age} years old")
 print(f"{parrot2.name} is {parrot2.age} years old")
+
+
+
+The `__init__` method is used to initialize the width and height attributes of a rectangle object. 
+
+These attributes are passed in as parameters when an instance of the Rectangle class is created. 
+
+The area and perimeter methods use these attributes to calculate the area and perimeter of the rectangle.
+
+You can create an instance of the Rectangle class by passing the width and height as arguments to the constructor `__init__` method.
+
+You can call the methods `area()` and `perimeter()` on the instance to get the area and perimeter of the rectangle.
