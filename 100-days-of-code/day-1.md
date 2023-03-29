@@ -113,3 +113,12 @@ on:
     branches:
       - main
 ```
+
+
+
+Inheritance is a mechanism in OOP that allows a class to inherit properties and methods from a parent class.
+
+- The parent class is also called the base class or superclass. 
+- The class that inherits from the parent class is called the child class or subclass.
+- The child class can then extend or modify the properties and methods inherited from the parent class, or it can introduce new properties and methods of its own.
+- Inheritance promotes code reuse, and it allows for a hierarchical organization of classes, where the more specific subclasses inherit from more general superclasses.
