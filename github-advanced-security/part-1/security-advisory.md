@@ -1,0 +1,3 @@
+When security vulnerabilities are identified, GitHub's security systems and integrations actively monitor the GitHub Advisory Database and other security databases to provide automatic security alerts and notifications to repository owners and users. These alerts are based on the dependency graph of the repository and help ensure that users are promptly informed about any vulnerabilities that may affect their projects.
+
+The GitHub Advisory Database is continuously updated with new vulnerability information and remediation details, allowing users to access the latest information on security risks and recommended fixes. 

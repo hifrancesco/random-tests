@@ -1,5 +1,0 @@
-In this example, we have a function is_negative that takes a number and returns True if it's negative, and False otherwise. The TestIsNegative class contains two test methods, test_negative_number and test_positive_number, that test the is_negative function with negative and positive numbers, respectively.
-
-The test_negative_number method checks that the result of calling is_negative with the argument -5 is True, using the assertTrue method. If the result is True, the test will pass and nothing will be output. If the result is False, the test will fail and the optional error message "-5 is a negative number" will be displayed.
-
-Similarly, the test_positive_number method checks that the result of calling is_negative with the argument 5 is False, using the assertFalse method. If the result is False, the test will pass and nothing will be output. If the result is True, the test will fail and the optional error message "5 is not a negative number" will be displayed.

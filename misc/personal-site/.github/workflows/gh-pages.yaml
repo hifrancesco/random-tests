@@ -1,0 +1,36 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual build'
+        required: false
+        default: 'testing'
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          cname: angusjellis.co.uk
