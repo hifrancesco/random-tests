@@ -18,14 +18,12 @@
     <summary><b>Competency Levels</b></summary>
 
 ```md
-9 Awesome
-8 Advanced
-7 Skilled
-6 Decent
-5 Intermediate
-4 Average
-3 Improver
-2 Beginner
+7 Awesome
+6 Advanced
+5 Skilled
+4 Decent
+3 Average
+2 Improver
 1 Newbie
 ```
 
@@ -34,8 +32,8 @@
 
 | Language | Cloud & Hosting Services | Other | Frameworks/Libraries |
 |----------------|----------------|----------------|----------------|
-|<img src="https://img.shields.io/badge/Python-Decent-green"/>   | <img src="https://img.shields.io/badge/AWS-Intermediate-orange" /> |<img src="https://img.shields.io/badge/Linux-Intermediate-black" /> | <img src="https://img.shields.io/badge/Flask-Average-pink" />
-|<img src="https://img.shields.io/badge/JavaScript-Improver-darkgreen" />|<img src="https://img.shields.io/badge/Azure-Intermediate-blue" />| <img src="https://img.shields.io/badge/HTML/CSS-Average-lightgreen" /> | <img src="https://img.shields.io/badge/Next.js-Beginner-violet" />
+|<img src="https://img.shields.io/badge/Python-Decent-green"/>   | <img src="https://img.shields.io/badge/AWS-Average-orange" /> |<img src="https://img.shields.io/badge/Linux-Decent-black" /> | <img src="https://img.shields.io/badge/Flask-Average-pink" />
+|<img src="https://img.shields.io/badge/JavaScript-Improver-darkgreen" />|<img src="https://img.shields.io/badge/Azure-Average-blue" />| <img src="https://img.shields.io/badge/HTML/CSS-Decent-lightgreen" /> | <img src="https://img.shields.io/badge/Next.js-Beginner-violet" />
 |<img src="https://img.shields.io/badge/Java-Newbie-red" />|<img src="https://img.shields.io/badge/GitHub-Decent-purple" />|<img src="https://img.shields.io/badge/Terraform-Improver-orange" />| <img src="https://img.shields.io/badge/React.js-Newbie-magenta" />
 
 ---
