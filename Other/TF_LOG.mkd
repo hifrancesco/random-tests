@@ -1,0 +1,51 @@
+## TF_LOG=TRACE
+
+export TF_LOG=TRACE is a command used to enable Terraform's logging functionality by setting the TF_LOG environment variable to the value TRACE.
+
+When TF_LOG is set to TRACE, Terraform will provide detailed logging output to the console, including information about which resources are being created, updated, or destroyed, as well as any errors or warnings that occur during the Terraform run.
+
+This logging functionality can be useful for troubleshooting Terraform issues, as it allows you to see the exact steps that Terraform is taking and identify any issues that may be causing problems.
+
+To enable logging, you can simply run the command export TF_LOG=TRACE in your terminal before running any Terraform commands. Once enabled, Terraform will log detailed information to the console during each run until the TF_LOG variable is unset or set to a different value.
+
+It's important to note that enabling logging can result in a large amount of output, especially when working with complex infrastructure. Therefore, it's recommended to only enable logging when needed and to disable it when troubleshooting is complete.
+
+## What are the values of TF_LOG?
+
+The TF_LOG environment variable in Terraform can take several different values, each controlling the level of logging output that is displayed. Here are the possible values for TF_LOG:
+
+- TRACE: This is the most detailed level of logging, providing information about every Terraform operation, including detailed information about the resources being created, updated, or destroyed, as well as any errors or warnings that occur.
+
+- DEBUG: This level of logging provides more detailed information about Terraform operations than the default logging level. It includes detailed information about resources being created, updated, or destroyed, as well as additional information about Terraform's internal state and configuration.
+
+- INFO: This is the default logging level for Terraform, providing information about Terraform operations as they occur, including which resources are being created, updated, or destroyed, and any errors or warnings that occur.
+
+- WARN: This level of logging displays warnings and errors that occur during Terraform operations, but does not display information about resources being created, updated, or destroyed.
+
+- ERROR: This logging level only displays errors that occur during Terraform operations, providing the least amount of logging output.
+
+## To set the TF_LOG environment variable to one of these values, you can use the following command in your terminal:
+
+```bash
+export TF_LOG=<logging_level>
+```
+
+Where <logging_level> is replaced with one of the values listed above. For example, to set the logging level to DEBUG, you would use:
+
+```bash
+export TF_LOG=DEBUG
+```
+
+It's important to note that enabling logging can result in a large amount of output, especially when working with complex infrastructure. Therefore, it's recommended to only enable logging when needed and to disable it when troubleshooting is complete.
+
+## Disable TF_LOG
+
+To disable logging in Terraform, you can simply unset the TF_LOG environment variable. You can do this by running the following command in your terminal:
+
+```bash
+unset TF_LOG
+```
+
+This command will remove the TF_LOG environment variable from your shell's environment, causing Terraform to revert to its default logging behavior. By default, Terraform will only display information about the resources being created, updated, or destroyed, as well as any errors or warnings that occur.
+
+It's a good practice to disable logging when you are finished troubleshooting your Terraform configuration or when you are running Terraform in a production environment, as it can significantly increase the amount of output generated during a Terraform run and impact system performance.

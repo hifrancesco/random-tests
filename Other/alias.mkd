@@ -1,0 +1,31 @@
+```json
+provider "aws" {
+  alias  = "us-east-1"
+  region = "us-east-1"
+}
+
+provider "aws" {
+  alias  = "us-west-2"
+  region = "us-west-2"
+}
+
+resource "aws_sns_topic" "topic-us-east" {
+  provider = aws.us-east-1
+  name     = "topic-us-east"
+}
+
+resource "aws_sns_topic" "topic-us-west" {
+  provider = aws.us-west-2
+  name     = "topic-us-west"
+}
+```
+
+In Terraform, a provider is responsible for communicating with a specific service or API, such as the Amazon Web Services (AWS) API. The aws provider in your example allows Terraform to interact with the AWS API.
+
+Using the alias attribute, you can create multiple instances of the same aws provider with different configurations. In your example, two instances of the aws provider are defined, one for the us-east-1 region and another for the us-west-2 region.
+
+Each instance of the aws provider is identified by its unique alias. When defining resources that interact with the AWS API, you can specify which instance of the aws provider to use by referencing the alias.
+
+For example, the aws_sns_topic resource is defined twice in your example, once for the us-east-1 region and once for the us-west-2 region. By using the provider attribute and specifying the appropriate alias for each resource, you can ensure that the correct instance of the aws provider is used for each resource.
+
+Using multiple provider instances with different configurations can be useful when you need to interact with multiple regions or other configurations within a single Terraform configuration.

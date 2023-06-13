@@ -1,0 +1,7 @@
+## What is OIDC authentication?
+
+OIDC stands for OpenID Connect, which is a standard for authentication that is built on top of OAuth 2.0. It allows for the authentication of users based on the authentication of a third-party identity provider (IDP).
+
+With OIDC authentication, the user is redirected to an IDP to authenticate themselves. After successful authentication, the IDP issues an identity token that is used to authenticate the user with the application. This identity token contains information about the user, such as their name and email address, and can also contain additional information about their authentication status.
+
+OIDC is widely used for web and mobile applications as a secure and efficient way to authenticate users without having to manage user authentication data.

@@ -1,0 +1,55 @@
+ (EKS) is a fully managed Kubernetes service provided by AWS. It enables users to run Kubernetes clusters on the AWS cloud, without having to manage the underlying infrastructure.
+ 
+ An EKS cluster is a managed Kubernetes control plane that consists of one or more EC2 instances running the Kubernetes software, and a set of Kubernetes worker nodes that run the applications. 
+ - EKS clusters can be created and managed through the AWS Management Console, the AWS CLI, or the EKS API.
+ 
+ The EKS control plane is the Kubernetes control plane managed by AWS, which consists of a set of Kubernetes control plane components such as the API server, etcd, kube-controller-manager, and kube-scheduler. 
+ - These components are responsible for managing the Kubernetes cluster, including scheduling, scaling, and deploying applications.
+ 
+User's perspective
+
+When a user creates an EKS cluster, AWS automatically provisions and manages the Kubernetes control plane, including the components and the underlying infrastructure. This includes provisioning EC2 instances, configuring networking and security, and scaling the control plane as needed to meet the demands of the workload.
+
+The user is responsible for creating and managing the Kubernetes worker nodes that run the applications, as well as deploying and managing the applications themselves.
+
+The EKS control plane provides a reliable and highly available Kubernetes infrastructure that can be used to deploy and manage containerized applications at scale. It eliminates the need for users to manage the underlying infrastructure and allows them to focus on their applications and business logic.
+
+Explain the difference between eks cluster and eks control plane in simple terms.
+
+An EKS cluster is a collection of computing resources that run Kubernetes applications, while the EKS control plane is the brain that manages and controls the EKS cluster.
+
+Think of an EKS cluster as a group of worker nodes that run your applications, while the EKS control plane is the manager that tells those worker nodes what to do. The control plane manages things like scheduling, scaling, and deploying applications, and it does so by communicating with the worker nodes.
+
+When you create an EKS cluster, you don't need to worry about setting up the control plane because AWS takes care of that for you. AWS provisions and manages the control plane, including the components and the underlying infrastructure, so that you can focus on your applications.
+
+In short, the EKS cluster is the collection of resources that runs your applications, while the EKS control plane is the system that manages and controls those resources.
+
+What is ECR?
+
+Amazon Elastic Container Registry (ECR) is a fully-managed Docker container registry provided by Amazon Web Services (AWS). It makes it easy for developers to store, manage, and deploy Docker container images in a secure and scalable manner.
+
+ECR is integrated with other AWS services such as Amazon Elastic Container Service (ECS), Amazon Elastic Kubernetes Service (EKS), and AWS Fargate, which makes it easy to deploy containerized applications in the AWS cloud.
+
+Some of the key features of ECR include:
+
+    Secure image management: ECR provides a secure and scalable way to store, manage, and deploy Docker container images. It integrates with AWS Identity and Access Management (IAM) to control access to images, and supports encryption at rest and in transit.
+
+    Private Docker registry: ECR provides a private Docker registry that can be used to store Docker images that are only accessible within the AWS ecosystem. This makes it easy to keep container images secure and ensure that they are only used by authorized users.
+
+    Scalable infrastructure: ECR provides a scalable infrastructure that can handle large-scale Docker image storage and distribution. This ensures that developers can quickly and easily push and pull Docker images as needed, without worrying about performance or scalability issues.
+
+    Integration with other AWS services: ECR integrates with other AWS services such as ECS, EKS, and AWS Fargate, which makes it easy to deploy containerized applications in the AWS cloud.
+
+In summary, ECR is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images in a secure and scalable manner. It integrates with other AWS services, which makes it a great choice for deploying containerized applications in the AWS cloud.
+
+Connection between ECR and EKS
+
+there is a strong connection between Amazon Elastic Container Registry (ECR) and Amazon Elastic Kubernetes Service (EKS), both of which are services provided by Amazon Web Services (AWS).
+
+ECR is a Docker container registry that allows developers to store and manage their container images. EKS, on the other hand, is a fully-managed Kubernetes service that allows developers to run containerized applications on the AWS cloud.
+
+The connection between ECR and EKS is that ECR can be used as the image repository for containerized applications running on EKS. When using EKS, developers typically store their container images in ECR, which makes it easy to deploy their applications to the Kubernetes cluster.
+
+EKS can be configured to pull container images directly from ECR, which means that developers do not need to manage their own image repositories. This makes it easy to deploy containerized applications on EKS, as the images are readily available in the ECR registry.
+
+Overall, ECR and EKS work together seamlessly to provide a complete solution for deploying and managing containerized applications in the AWS cloud. ECR provides the image repository while EKS provides the infrastructure for running and scaling the applications.

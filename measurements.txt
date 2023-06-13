@@ -1,0 +1,3 @@
+bust 42.5
+waist 39.5
+hips 39

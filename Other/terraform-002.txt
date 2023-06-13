@@ -1,0 +1,259 @@
+Problem with manual configuration:
+
+easy to misconfigure a service through human error
+hard to manage the expected state of cofniguration for compliance
+hard to transfer configuration knowledge to other team members
+
+IaC
+you write a configuration script to automate, create, update, or destroy cloud infrastructure
+allows you to share, version or inventory of your cloud infrastructure
+
+---
+
+Popular IaC tools
+
+Declarative
+- what you see is what you get (Explicit)
+- more verbose, but zero chance of misconfiguration
+- uses scripting languages e.g. json, yaml, xml
+
+ARM templates
+Azure blueprints
+CloudFormation
+Cloud Deployment Manager
+Terraform
+
+Imperative
+- you say what you want, and the rest is filled in (Implicit)
+- less verbose, you could end up with misconfiguration
+- does more than declarative
+- uses programming langauges e.g. Python, Ruby, JavaScript
+
+AWS Cloud Development Kit (CDK)
+Pulumi (supports aws, azure, GCP, K8)
+
+---
+
+Declarative+
+Terraform declarative but the terraform langauge features imperative-like functionality
+
+Declarative
+- YAML, JSON, XML
+
+Imperative
+- Python, Ruby, JavaScript
+
+---
+
+What is infrastructure lifecycle?
+a number of clearly defined and distinct work phases which are used by devops engineers to plan, design, build, test, deliver, maintain, and retire cloud infrastructure
+
+how does IaC enhance the infrastrucutre life cycle?
+
+- reliability: IaC makes changes idempotent, consistent, repeatable and predictable
+IDEMPOTENT means no matter how many times you run IaC, you will always end up with the same state that is expected
+
+- manageability: enable mutation via code
+
+- sensibility: avoid financial and reputational loss
+
+---
+
+Non-dempotent vs Idempotent
+
+Non-idempotent:
+when i deploy my IaC config file it will provision and launch 2 VMs
+
+When I update my IaC and deploy again, I will end up with 2 new VMs with a total of 4 VMs
+
+Idempotent:
+Whne I deploy my IaC file it will provision and launch 2 VMs
+
+When I update my IaC and deploy again, it will update the VMs if changed by modifying or deleting and creating new VMs
+
+---
+
+Provisioning vs Deployment vs Orchestration
+
+Provisioning
+to preprare a server with systems, data, software, and make it ready for network operation
+using configuration management tools like Puppet, Ansible, Chef, Bash Scripts, powershell or cloud-init, you can provision a server
+
+When you launch a cloud serviec and configure it you are "provisioning"
+
+Deployment
+deployment is the act of delivering a version of your application to run a provisioned server. Deployment cloud be performed via AWS CodePipeline, Harness, Jenkins, GitHub actions, CircleCI
+
+Orchestration 
+orchestration is the act of coordinating multiple systems or services. It is a common term when working with mciroservices, containers, kubernetes. Orchestration could be Kubernetes, Salt, Fabric
+
+---
+
+Configuration Drift
+
+configuration drift is when provisioned infrastructure has an unexpeted configuration change due to:
+
+- team emmbers manually adjusting configuration options
+- malicious actors
+- side affects from APIs, SDK, CLIs
+
+e.g. a junior developer turns on Delete on Termination for the production database
+
+Configuration Drift going unnoticed could be a loss or breach of cloud services and residing data or result in interruption of services or unexpected downtime
+
+How to detect configuration drift?
+- a compliance tool that can detect misconfiguration e.g. AWS COnfig, Azure Policies, GCP security Health analytics
+- built-in support for drift detection e.g. AWS Clouformation drifit detection
+- storing the expected state e.g. terrafrom state files
+
+How to correct configuration drift?
+- a compliance tool that can remediate (correct )misconfiguration e.g. AWS Config
+- terraform refresh and plan commands
+- manually correcting the configuration (NOT recomended)
+
+how to prevent configuration drift?
+- immutable infrastrucutre, always create and destroy, never reuse (Blue, Green deployment strategy)
+
+---
+
+Mutable vs Immutable Infrastructure
+
+mutable infrastrucutre 
+
+develop-> deploy -> configure
+
+a VM is deployed and then a configuration management tool like ansible, puppet, chef, Salr or CLoud-Init is used to configure the state of the server
+
+Immutable infrastrucutre
+
+develop_> configure -> deploy
+
+a VM is launched and provisioned, and then it is turned into a Virtual Image stored in image repository. That images is used to deployed VM instances
+
+---
+
+What is GitOps?
+
+GitOps is when you take IaC and you use a git repository to introduce a formal process to review and accept changes to infrastructure code, onece that code is accepted, it automatically triggers a deploy 
+
+---
+
+Immutable infarstructure guarantee
+
+terraform encoruages you towrads an immutable infrastructure archtiect, so you get the following gurantees:
+
+cloud resource failure - what if an EC2 instnace fails a status check?
+application failure - what if your post installations cript failes due to change in package?
+time to deploy - what if Need to deploy in a hurry?
+worst case scenario:
+- accidental deletion, compromised by malicious actor, need to change reigions (region outage)
+
+---
+
+What is HashiCorp?
+
+HCP is a unified platform to access Hashicopr various products. HCP servies are cloud agnostic. Highly suited for multi-cloud workloads.
+
+HashiCorp products
+-boundary
+secure remote access to systems based on trusted identity
+-consul
+-nomad
+-packer
+-terraform
+-terraform cloud
+-vagrant
+-vault
+-waypoint
+
+---
+
+what is terraform
+
+terraform uses declarative configuration files. the files are written in haschicorp configuration language (HCL)
+
+terraform cloud is a SaaS offering for remote state storage, version control ingtegrations, flexible workflows, collaborate on intrastrucutre changes
+
+---
+
+terraform lifecycle
+
+code, write or update your terraform configuration file -> init, initialise you rproject, pull the latest providers and modules -> plan, speculate what will change or generate a saved execution plan -> validate, ensures types and values are valid, ensures required attribute are present -> apply, execute the terraform plan provisioning the infrastructure -> destroy, desotry the remote infrastructure
+
+---
+
+change automation - a way to automatically creating a consistnt, systematic and predictable way of managing change request via controls and policies
+
+what is change managemnet is a standard papproach to apply change and resolving conflicts borught about change
+
+terraform uses change automation in the form of execution plans and resource graphs to apply and review complex changesets
+
+what is changeset? a collection of commits that represent changes made to a veersioning repository. IaC uses changesets so you can see what has changed by who over time.
+
+Change Automation allows you to know exactly what terraform will change and in what order, avoiding many human errors
+
+---
+
+Execution Plans
+
+an execution plan is a manual review of what will add, change or destroy before you apply changes e.g. terraform apply
+
+--- visualising execution plans
+
+terraform graph | dot -Tsvg > graph.svg
+
+you can visualise an excution plan. you need GraphVIz installed to view the file
+
+---
+
+resource graph
+
+terraform builds a dependency graph from the terraform cofnigurations and walsk this graph to generate plans, refresh state, and more
+
+when you use terraform graph, this is visual presentation of the dependency graph
+
+what is a depdency graph? it is directed graph representin g dependencies of several objects towards each other
+
+--- 
+
+use cases
+
+IaC for exotic providers. as it is open-srouce and extendable, so any API could be used to create IaC tooling for any kind of cloud platform or technology .e.g heroku, spotify playlists
+
+multi-tier applications. terraform by default makes it easy to divide large and complex applications into isolateed configuration scripts (modules). It has advantage over cloud-native IaC tools for its flexibility while retaining simplicity over imperative tools
+
+disposable environments - can easily spin up an environment for a software demo or temporary development environment
+
+resoruces schedulers - terraform is not just defined to ifnarstrucutre of clodu resoruce but can be used to dynamic schedule docker cointainres, hadoop, spark and other software tools. you can provision your own schduling grid.
+
+multi-cloud deployment - cloud-agnostic and allows a single configuration to be used to manage multiple providers and to even handle cross-cloud dependencies
+
+---
+
+terraform core and plugins
+
+terraform is logically split into two main parts
+- terraform core uses procedure calls (RPC) to communicate with terraform plugins
+- terraform core is a statically-compliked binary writtern in Golang
+- terraform plugins expose an implementation for a specific service, or provisioner
+
+---
+
+terraform up and running book
+
+---
+
+https://www.terraform-best-practices.com/
+
+---
+
+terraform install
+manually, homebrew, chocolatey, linux
+
+---
+
+google "terraform providers" > select cloud platform > use provider > documentation for what you want to create
+
+---
+[57:30]
+https://www.youtube.com/watch?v=V4waklkBC38

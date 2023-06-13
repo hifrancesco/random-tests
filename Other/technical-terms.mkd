@@ -1,0 +1,7 @@
+## What does fully-managed service mean?
+
+A fully-managed service refers to a service provided by a cloud provider that handles all of the operational aspects of the service, including infrastructure management, maintenance, security, and scaling. This means that the customer does not have to worry about any of the underlying infrastructure and can focus solely on using the service. The cloud provider takes care of all the necessary operations to ensure that the service is available and performant, allowing the customer to take advantage of the benefits of the service without having to invest in or manage any of the underlying infrastructure.
+
+## What are availability zones?
+
+Availability Zones (AZs) are distinct physical locations within a geographical region that contain one or more data centers. Each AZ is designed to be independent of the others, with its own power, cooling, and networking infrastructure, which makes it less susceptible to failures that could affect other AZs. By deploying resources across multiple AZs, you can achieve higher availability and fault tolerance. If one AZ experiences an outage, resources in other AZs can continue serving traffic. AWS recommends deploying resources across at least two AZs for high availability.

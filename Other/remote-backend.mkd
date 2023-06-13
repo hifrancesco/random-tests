@@ -1,0 +1,9 @@
+## What is the remote backend?
+
+In Terraform, a backend is a remote storage location where the state of the infrastructure is stored. The state of the infrastructure is an important aspect of Terraform as it represents the current state of the resources that Terraform is managing.
+
+The remote backend is a type of backend where the state is stored in a remote location such as a cloud storage service like Amazon S3 or Microsoft Azure Blob Storage. This allows for the state to be accessed and modified from multiple locations, making it easier to collaborate on infrastructure management with a team. Additionally, remote backends allow for locking and versioning of the state, which helps prevent conflicts and ensures consistency.
+
+## Do you mean where the state file is saved?
+
+Yes. The remote backend is the location where the Terraform state file is stored. When Terraform runs, it reads the state file to determine the current state of the resources it is managing, and then compares that with the desired state defined in the configuration files. The state file can be stored locally or remotely, and the remote backend provides additional benefits such as collaboration and versioning.

@@ -1,0 +1,65 @@
+##Threat Model
+
+## What is an EKS cluster?
+Amazon Elastic Kubernetes Service (EKS) is a fully-managed service that makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.
+
+An EKS cluster is a managed Kubernetes control plane that runs in multiple Availability Zones to provide high availability and scalability for your applications. The control plane is responsible for managing the Kubernetes API server, etcd database, and other critical components that make up a Kubernetes cluster.
+
+You can use EKS to deploy and manage containerized applications in a variety of environments, including development, staging, and production. EKS supports standard Kubernetes features, such as scaling, load balancing, and service discovery, as well as integrations with other AWS services like Elastic Load Balancing, Amazon RDS, and AWS Identity and Access Management (IAM).
+
+## What is the Kubernetes managed control pane?
+The Kubernetes managed control plane is a set of services and components that make up the brain of a Kubernetes cluster. It provides the necessary orchestration and management for the containerized applications running on the cluster.
+
+The Kubernetes control plane consists of several components, including the Kubernetes API server, etcd, kube-scheduler, kube-controller-manager, and kubelet. These components work together to manage the deployment, scaling, and updating of containerized applications on the cluster.
+
+In a managed Kubernetes service like EKS, the control plane is fully managed by the cloud provider, so users don't have to worry about installing, configuring, or maintaining these components themselves. This allows users to focus on deploying and managing their applications on the cluster without worrying about the underlying infrastructure.
+
+What are etcd, kube-scheduler, kube-controller-manager, and kubelet?
+
+## etcd, kube-scheduler, kube-controller-manager, and kubelet are important components of the Kubernetes cluster architecture:
+
+    etcd: a distributed key-value store that stores the configuration data of the entire Kubernetes cluster. It is used to maintain the state of the Kubernetes cluster and provides a way for Kubernetes components to communicate with each other.
+
+    kube-scheduler: a component responsible for scheduling Kubernetes pods to run on nodes in the cluster. It ensures that the right pods are scheduled to the right nodes based on factors such as resource requirements and availability.
+
+    kube-controller-manager: a component that runs a set of Kubernetes controllers. These controllers are responsible for managing the state of the Kubernetes cluster, including node and pod operations.
+
+    kubelet: a component that runs on each node in the Kubernetes cluster and is responsible for starting and stopping containers, as well as monitoring their health. It communicates with the Kubernetes API server to receive instructions on what containers to run and where to run them.
+    
+## What is an actions runner controller?
+
+An Actions Runner Controller is a Kubernetes operator that automates the management and scaling of self-hosted runners for GitHub Actions. It provides a scalable solution for organizations that need to run large numbers of automated workflows, by enabling them to manage their own hardware resources and execute workflows securely within their own environment.
+
+The Actions Runner Controller runs as a Kubernetes controller that interacts with the Kubernetes API server to manage the lifecycle of the self-hosted runners. It can automatically create, update, and delete runners based on the demand for workflow execution, and can also ensure that runners are configured securely and up to date with the latest version of the runner software.
+
+In essence, the Actions Runner Controller enables organizations to bring their own infrastructure to the GitHub Actions workflow execution environment, providing greater flexibility, control, and security over their workflows.
+
+## What are Actions Runner Controller and Horizontal Cluster Autoscaler?
+
+Actions Runner Controller and Horizontal Cluster Autoscaler are both components of the deployment pipeline on the AWS platform, used for scaling and managing resources in a cloud environment.
+
+    The Actions Runner Controller is a tool that allows you to run self-hosted GitHub Actions runners on your own infrastructure. It provides a centralized point of control for managing and deploying actions runners across multiple environments, and allows you to customize the runner environment to meet your specific needs.
+
+    The Horizontal Cluster Autoscaler is a Kubernetes feature that automatically adjusts the number of running pods in a deployment based on observed CPU utilization. It ensures that your application always has the right amount of resources, and can automatically scale up or down based on demand.
+
+Both components are critical for ensuring the availability and reliability of your cloud infrastructure, and require regular monitoring and maintenance to ensure that they are secure and performant.
+
+## What is cert-manager from Kubernetes?
+
+Cert-manager is a Kubernetes add-on that automates the management and issuance of SSL/TLS certificates. It helps to simplify the process of obtaining, renewing, and revoking certificates for secure communication between Kubernetes clusters, and it integrates with popular certificate authorities (CAs) like Let's Encrypt.
+
+Cert-manager is built on top of Kubernetes and relies on Custom Resource Definitions (CRDs) to define SSL/TLS certificate requests and certificates. It can automatically create and manage certificates for applications running in Kubernetes clusters, and it can be configured to automatically renew certificates before they expire. Cert-manager also provides a centralized place to manage all certificates used in a Kubernetes cluster, and supports various validation methods like HTTP and DNS.
+
+Overall, cert-manager helps to improve the security of Kubernetes clusters by automating the management of SSL/TLS certificates, reducing the risk of expired or misconfigured certificates, and simplifying the certificate management process for developers and system administrators.
+
+## What are private and public subnets?
+
+Private and public subnets are two types of subnets within a Virtual Private Cloud (VPC) in a cloud computing environment like Amazon Web Services (AWS).
+
+A public subnet is a subnet that has a direct route to the internet, meaning instances launched in this subnet have a public IP address and can be directly accessed from the internet. Public subnets are typically used for resources that need to be publicly accessible, such as web servers or load balancers.
+
+On the other hand, a private subnet is a subnet that does not have a direct route to the internet, meaning instances launched in this subnet do not have a public IP address and cannot be directly accessed from the internet. Private subnets are typically used for resources that do not need to be publicly accessible, such as databases or backend services.
+
+It is important to note that instances launched in a private subnet can still access the internet via a NAT gateway or instance in a public subnet. This allows them to download software updates or access external APIs, for example, while still maintaining a secure network architecture.
+
+In summary, public and private subnets are two types of subnets within a VPC, with public subnets having a direct route to the internet and private subnets not having a direct route to the internet.
